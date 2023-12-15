@@ -17,4 +17,4 @@ jobs:
               run: echo "Hello, World!"
 
             - name: Second step
-              run: echo "::set-output name=result::success"
+              run: echo "::set-output name=result::failure"
