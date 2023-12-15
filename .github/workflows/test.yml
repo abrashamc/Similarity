@@ -1,0 +1,19 @@
+name: Build
+on:
+    workflow_dispatch:
+
+concurrency:
+    group: "${{ github.workflow }}-${{ github.ref }}"
+    cancel-in-progress: true
+
+jobs:
+    action_down:
+        runs-on: gh
+        if: always()
+        steps:
+            - name: First step
+              continue-on-error: true
+              run: echo "Hello, World!"
+
+            - name: Second step
+              run: echo "::set-output name=result::success"
