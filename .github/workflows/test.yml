@@ -1,5 +1,6 @@
 name: Build
 on:
+    pull_request:
     workflow_dispatch:
 
 concurrency:
@@ -8,7 +9,7 @@ concurrency:
 
 jobs:
     action_down:
-        runs-on: gh
+        runs-on: ubuntu-latest
         if: always()
         steps:
             - name: First step
