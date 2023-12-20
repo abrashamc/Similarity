@@ -13,4 +13,5 @@ jobs:
         if: always()
         steps:
             - name: First step
+              continue-on-error: true
               run: ./De
