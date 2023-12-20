@@ -13,8 +13,5 @@ jobs:
         if: always()
         steps:
             - name: First step
-            #   continue-on-error: true
+              continue-on-error: true
               run: ./De
-
-            # - name: Second step
-            #   run: echo "::set-output name=result::success"
