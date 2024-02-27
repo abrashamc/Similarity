@@ -34,8 +34,8 @@ jobs:
           git tag -a $TAG_VERSION -m "Release $TAG_VERSION"
           git push origin $TAG_VERSION
 
-      - name: Update the ${{ env.TAG_NAME }} tag
-        uses: actions/publish-action@v0.2.2
-        with:
-          source-tag: ${{ env.TAG_NAME }}
-          slack-webhook: ${{ secrets.SLACK_WEBHOOK }}
+    #   - name: Update the ${{ env.TAG_NAME }} tag
+    #     uses: actions/publish-action@v0.2.2
+    #     with:
+    #       source-tag: ${{ env.TAG_NAME }}
+    #       slack-webhook: ${{ secrets.SLACK_WEBHOOK }}
